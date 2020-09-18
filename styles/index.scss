@@ -1,0 +1,57 @@
+
+@import "./css-reset";
+@import "./media";
+@import "./colors";
+@import "header";
+@import "./aboutme";
+@import "./skills";
+@import "./blogs";
+@import "./projects";
+@import "https://use.typekit.net/edk0gem.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Graphie;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.38;
+  letter-spacing: 0.32px;
+  background: $light-shark;
+}
+.btn-cta {
+  padding: 20px;
+  color: #A3ABB7;
+  border: 1px solid #A3ABB7;
+  cursor: pointer;
+  background: inherit;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  outline: none;
+  &:hover {
+    background: $white;
+    color: $shark;
+  }
+}
+
+.content-container {
+  width: 80%;
+  max-width: 1170px;
+  margin: auto;
+
+  @media screen and (max-width: $screen-lg) {
+    width: 87%;
+  }
+  @media screen and (max-width: $screen-md) {
+    width: 95%;
+  }
+  @media screen and (max-width: $screen-sm) {
+    width: calc(100% - 20px);
+  }
+}
