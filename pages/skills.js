@@ -43,12 +43,14 @@ const SkillItem = ({skill}) => {
   }, [])
   return (
     <li className="skill-page__listitem">
-      <div className="skill-logo">
-        <img src={skill.logo} alt={skill.logo}/>
+      <div className="skill-title-wrapper">
+        <div className="skill-logo">
+          <img src={skill.logo} alt={skill.logo}/>
+        </div>
+        <p>
+          {skill.name}
+        </p>
       </div>
-      <p>
-        {skill.name}
-      </p>
       <div className="skill-empty">
         <div className="skill-filled" ref={skillRef}>
           <span>{level}%</span>

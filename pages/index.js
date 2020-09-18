@@ -27,8 +27,16 @@ const AboutMe = () => {
       <Header active={HEADERLINKS.ABOUTME} />
       {showDetails ? (
         <div className="detail-page-wrapper content-container">
-          <div className="detail__image">
-            <img src="/profile-pic.png" alt="profile_pic" />
+          <div className="detail__imagewrapper">
+            <div className="detail__image">
+              <img src="/profile-pic.png" alt="profile_pic" />
+            </div>
+            <span
+              className="detail__backicon"
+              onClick={() => setShowDetails(false)}
+            >
+              &#10132;
+            </span>
           </div>
           <p>
             I am a software engineer having 2.5 yrs of work experience in
@@ -37,12 +45,12 @@ const AboutMe = () => {
             having 2.5 yrs of work experience in Frontend development
           </p>
           <div className="detail__cta">
-            <button className="btn-cta" onClick={() => setShowDetails(false)}>BACK</button>
+            {/* <button className="btn-cta" onClick={() => setShowDetails(false)}>BACK</button> */}
             <button className="btn-cta">RESUME</button>
           </div>
         </div>
       ) : (
-        <div className="about-page-wrapper">
+        <div className="about-page-wrapper content-container">
           <div className="about-page__main">
             <h1>PULKIT NAGPAL</h1>
             {/* <p>Just Another Frontend Guy</p> */}

@@ -48,7 +48,7 @@ const projectData = [
     title: "My Personal Portfolio which uses SSG feature of NextJS",
     technologies: ['Nextjs', 'react', 'SCSS'],
     links: {
-      code: "https://github.com/pulkitnagpal/chat-app-react-firebase",
+      code: "https://github.com/pulkitnagpal/my-portfolio",
       // site: ""
     }
   },

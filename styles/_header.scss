@@ -1,3 +1,14 @@
+$color: $grayChat;
+$size: 40px;
+@mixin pill(){
+  content:'';
+  position:absolute;
+  width: 100%;
+  height: 12%;
+  background: $color;
+  border-radius: $size;
+  transition: all .5s cubic-bezier(.1, .9, 0, 1.2);
+}
 .header-wrapper {
   position: fixed;
   top: 0;
@@ -25,4 +36,109 @@
       background-color: $light-shark;
     }
   }
+  .hamburger-wrapper {
+    display: none;
+  }
 }
+
+.mobile-header-wrapper {
+  width: 100vw;
+  height: 100vh;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+  background-color: $shark;
+  z-index: 1;
+  position: absolute;
+  top: 80px;
+  & > ul {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    text-align: center;
+    & > li {
+      width: 100%;
+      color: $rolling-stone;
+      line-height: 80px;
+      cursor: pointer;
+      letter-spacing: 1.40px;
+    }
+    & > li.active {
+      color: $white;
+      background-color: $light-shark;
+    }
+  }
+}
+@media screen and (max-width: $screen-md) {
+  .header-wrapper {
+    .header__links {
+      display: none;
+    }
+    .hamburger-wrapper {
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: $size;
+      height: $size;
+      bun {
+        &:before{
+          @include pill();
+          top: 10%;
+          right:0;
+        }
+    
+        &:after{
+          @include pill();
+          bottom: 10%;
+          left:0;
+        }
+    
+        burger{
+          position: absolute;
+          display: flex;
+          align-items: center;
+          height: $size;
+          width: $size;
+    
+          &:before, &:after{
+            @include pill();
+          }
+        }
+      }
+      
+      input{
+        display:block;
+        position: absolute;
+        opacity: 0;
+        z-index: 1;
+        width:$size;
+        height:$size;
+        cursor:pointer;
+        
+        &:hover ~ bun{
+          &:before, &:after, :before, :after{
+            background: darken($color,5);
+          }
+        }
+        
+        &:checked ~ bun{
+          &:before, &:after{
+            width:0;
+          }
+    
+          burger{
+            &:before{
+              transform:rotate(135deg);
+            }
+            &:after{
+              transform:rotate(45deg);
+              box-shadow:0 0 0 0 lighten($color,35);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
