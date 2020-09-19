@@ -1,7 +1,11 @@
 {
   "/_app": "pages/_app.js",
+  "/blog": "pages/blog.html",
+  "/experience": "pages/experience.html",
+  "/": "pages/index.html",
+  "/projects": "pages/projects.html",
+  "/skills": "pages/skills.html",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/skills": "pages/skills.js"
+  "/404": "pages/404.html"
 }

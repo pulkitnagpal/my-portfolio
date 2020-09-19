@@ -1,0 +1,1 @@
+{"ast":null,"code":"var __jsx = React.createElement;\nimport React from 'react';\nexport default function Button(_ref) {\n  var onClick = _ref.onClick,\n      text = _ref.text;\n  return __jsx(\"button\", {\n    onClick: onClick,\n    className: \"btn-cta\"\n  }, text);\n}","map":null,"metadata":{},"sourceType":"module"}
