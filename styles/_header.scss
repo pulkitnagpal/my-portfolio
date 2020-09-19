@@ -94,7 +94,7 @@ $size: 40px;
       transform: translateY(-50%);
       width: $size;
       height: $size;
-      bun {
+      div.bun {
         &:before{
           @include pill();
           top: 10%;
@@ -107,7 +107,7 @@ $size: 40px;
           left:0;
         }
     
-        burger{
+        div.burger{
           position: absolute;
           display: flex;
           align-items: center;
@@ -129,18 +129,18 @@ $size: 40px;
         height:$size;
         cursor:pointer;
         
-        &:hover ~ bun{
+        &:hover ~ div.bun{
           &:before, &:after, :before, :after{
             background: darken($color,5);
           }
         }
         
-        &:checked ~ bun{
+        &:checked ~ div.bun{
           &:before, &:after{
             width:0;
           }
     
-          burger{
+          div.burger{
             &:before{
               transform:rotate(135deg);
             }

@@ -26,6 +26,7 @@ const SkillItem = ({skill}) => {
   const skillRef = useRef();
   
   useEffect(() => {
+    skillRef.current.style.width = '0';
     skillRef.current.style.width = `${skill.level}%`
     let interval = null;
     interval = setInterval(() => {
@@ -40,7 +41,7 @@ const SkillItem = ({skill}) => {
     return () => {
       clearInterval(interval)
     }
-  }, [])
+  }, [skillRef])
   return (
     <li className="skill-page__listitem">
       <div className="skill-title-wrapper">
@@ -70,38 +71,63 @@ const SKILLS = [
     logo: "/react-logo.png"
   },
   {
-    name: "Webpack",
-    level: 56,
-    logo: "/webpack-logo.png"
-  },
-  {
-    name: "SCSS",
-    level: 78,
-    logo: "/scss-logo.svg"
-  },
-  {
-    name: "CSS",
+    name: "Redux",
     level: 70,
-    logo: "/css-logo.png"
+    logo: "/redux-logo.png"
   },
   {
-    name: "HTML5",
-    level: 80,
-    logo: "/html5-logo.png"
+    name: "Javascript",
+    level: 70,
+    logo: "/javascript-logo.png"
   },
   {
-    name: "AngularJS",
-    level: 50,
-    logo: "/angularjs-logo.svg"
+    name: "Typescript",
+    level: 40,
+    logo: "/typescript-logo.png"
+  },
+  {
+    name: "GraphQL",
+    level: 58,
+    logo: "/graphql-logo.png"
   },
   {
     name: "NextJS",
-    level: 40,
+    level: 60,
     logo: "/nextjs-logo.png"
+  },
+  {
+    name: "NodeJS",
+    level: 55,
+    logo: "/nodejs-logo.png"
   },
   {
     name: "styled-components",
     level: 80,
     logo: "/styled-components-logo.png"
+  },
+  {
+    name: "SCSS",
+    level: 70,
+    logo: "/scss-logo.svg"
+  },
+  {
+    name: "CSS",
+    level: 80,
+    logo: "/css-logo.png"
+  },
+  {
+    name: "HTML5",
+    level: 75,
+    logo: "/html5-logo.png"
+  },
+  {
+    name: "Webpack",
+    level: 56,
+    logo: "/webpack-logo.png"
+  },
+  {
+    name: "AngularJS",
+    level: 50,
+    logo: "/angularjs-logo.svg"
   }
 ]

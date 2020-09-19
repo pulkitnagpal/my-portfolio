@@ -32,10 +32,11 @@ const Header = ({ active = HEADERLINKS.ABOUTME }) => {
   return (
     <div className="header-wrapper">
       <ul className="header__links">
-        {Object.values(HEADERLINKS).map((value) => (
+        {Object.values(HEADERLINKS).map((value, index) => (
           <li
             className={value.value === active.value ? "active" : ""}
             onClick={() => handleNavigate(value.link)}
+            key={index}
           >
             {value.value}
           </li>
@@ -46,9 +47,9 @@ const Header = ({ active = HEADERLINKS.ABOUTME }) => {
         onClick={() => setOpenSidebar(!openSidebar)}
       >
         <input type="checkbox" />
-        <bun>
-          <burger />
-        </bun>
+        <div className="bun">
+          <div className="burger" />
+        </div>
       </div>
       <div
         className="mobile-header-wrapper"
@@ -61,10 +62,11 @@ const Header = ({ active = HEADERLINKS.ABOUTME }) => {
         }
       >
         <ul>
-          {Object.values(HEADERLINKS).map((value) => (
+          {Object.values(HEADERLINKS).map((value, index) => (
             <li
               className={value.value === active.value ? "active" : ""}
               onClick={() => handleNavigate(value.link)}
+              key={index}
             >
               {value.value}
             </li>
