@@ -50,6 +50,7 @@ $size: 40px;
   z-index: 1;
   position: absolute;
   top: 80px;
+  display: none;
   & > ul {
     width: 100%;
     overflow: scroll;
@@ -82,6 +83,9 @@ $size: 40px;
   }
 }
 @media screen and (max-width: $screen-md) {
+  .mobile-header-wrapper {
+    display: block;
+  }
   .header-wrapper {
     .header__links {
       display: none;
