@@ -40,9 +40,7 @@ const AboutMe = () => {
           </div>
           <p>
             I am a software engineer having 2.5 yrs of work experience in
-            Frontend development. I am a software engineer having 2.5 yrs of
-            work experience in Frontend development. I am a software engineer
-            having 2.5 yrs of work experience in Frontend development
+            Frontend development. I am passionate about Javascript and learning it inside out. I write technical blogs in my free time. Apart from work I love music and travelling.
           </p>
           <div className="detail__cta">
             {/* <button className="btn-cta" onClick={() => setShowDetails(false)}>BACK</button> */}
