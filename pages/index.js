@@ -44,7 +44,7 @@ const AboutMe = () => {
           </p>
           <div className="detail__cta">
             {/* <button className="btn-cta" onClick={() => setShowDetails(false)}>BACK</button> */}
-            <button className="btn-cta">RESUME</button>
+            <a className="btn-cta" href="/resume.pdf" target="blank">RESUME</a>
           </div>
         </div>
       ) : (
