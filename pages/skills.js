@@ -67,7 +67,7 @@ export default Skills;
 const SKILLS = [
   {
     name: "React",
-    level: 75,
+    level: 80,
     logo: "/react-logo.png"
   },
   {
@@ -77,17 +77,17 @@ const SKILLS = [
   },
   {
     name: "Javascript",
-    level: 70,
+    level: 75,
     logo: "/javascript-logo.png"
   },
   {
     name: "Typescript",
-    level: 40,
+    level: 65,
     logo: "/typescript-logo.png"
   },
   {
     name: "GraphQL",
-    level: 58,
+    level: 60,
     logo: "/graphql-logo.png"
   },
   {

@@ -51,18 +51,20 @@
       margin-right: 7px;
       letter-spacing: 0.7px;
       display: inline-block;
+      margin-bottom: 7px;
     }
     & > span.techchip{
-      &--react {
+      
+      &--react, &--Apollo {
         background-color: $lilacbush;
       }
-      &--firebase {
+      &--firebase, &--Webpack {
         background-color: $muddywaters;
       }
       &--redux {
         background-color: $cornflower;
       }
-      &--HTML, &--Nextjs {
+      &--HTML, &--Nextjs, &--MongoDB {
         background-color: $sunglo;
       }
       &--CSS, &--SCSS {
@@ -71,7 +73,7 @@
       &--VanillaJS {
         background-color: $equator;
       }
-      &--react-native {
+      &--react-native, &--graphQL {
         background-color: $java;
       }
     }

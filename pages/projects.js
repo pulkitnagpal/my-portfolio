@@ -45,6 +45,20 @@ const projectData = [
     }
   }, 
   {
+    title: "Simple fetch Songs and add lyrics to the song",
+    technologies: ['react', 'MongoDB', 'graphQL', 'Apollo'],
+    links: {
+      code: "https://github.com/pulkitnagpal/react-apollo-graphql"
+    }
+  },
+  {
+    title: "Custom JSX Plugin for understanding JSX transpilation",
+    technologies: ['Webpack'],
+    links: {
+      code: "https://github.com/pulkitnagpal/custom-jsx-plugin"
+    }
+  },
+  {
     title: "My Personal Portfolio which uses SSG feature of NextJS",
     technologies: ['Nextjs', 'react', 'SCSS'],
     links: {
